@@ -10,7 +10,7 @@
     "build-css": "node-less-chokidar static/ -o static/",
     "watch-css": "npm run build-css && node-less-chokidar static/ -o static/ --watch --recursive",
     "build": "npm run build-css && babel lib -d build",
-    "lint": "eslint lib/**; exit 0",
+    "lint": "eslint lib/**",
     "lint:watch": "esw -w lib/**",
     "prepublish": "npm run build",
     "postinstall": " npm run build"
@@ -31,23 +31,21 @@
   "homepage": "https://github.com/decred/snew-classic-ui#readme",
   "dependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.1",
+    "babel-core": "6.26.3",
+    "babel-eslint": "10.0.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "node-less": "^1.0.0",
-    "node-less-chokidar": "^0.3.1",
-    "polished": "^1.8.1"
+    "node-less-chokidar": "^0.3.1"
   },
   "devDependencies": {
-    "eslint": "^4.9.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.4.0",
-    "eslint-watch": "^3.1.3",
-    "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "eslint": "5.7.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-react": "7.11.1",
+    "prop-types": "15.6.2",
+    "react": "16.5.2",
+    "react-dom": "16.5.2"
   }
 }
