@@ -8652,11 +8652,25 @@ form#banned textarea {
     font-size: 12px;
 }
 
-.new-comment .usertext-body {
-    background-color: #e5efff;
-    border: solid 1px #cddaf3;
-    margin: -1px 0;
-    padding: 0 4px;
+.new-comment {
+    .keyframes(fade-in;{
+		0% { background-color: #e5efff; }
+		75% { background-color: #e5efff; }
+		100% { background-color: inherit; }
+        });
+    .animation(fade-in 10s);
+}
+
+.keyframes(@name; @arguments) {
+	@-moz-keyframes @name { @arguments(); }
+	@-webkit-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
+}
+
+.animation(@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	animation: @arguments;
 }
 
 .role {
