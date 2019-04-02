@@ -1779,8 +1779,24 @@ body.with-listing-chooser.explore-page #header .pagename {
     background-color: #fff;
 }
 
+.white-comment:hover > div > div > .tagline > .comment-selector {
+    display: block;
+}
+
+.comment-selector {
+    display: none;
+    float: right;
+}
+
+.comment-selector.toggle-selection {
+    display: block !important;
+}
+
 .child .inner-comment {
     border-left: 1px solid #edf1f3;
+}
+.child .new-inner-comment {
+    border-left: 1px solid #CFA03F;
 }
 
 .commentarea .menuarea {
@@ -8663,8 +8679,9 @@ form#banned textarea {
 
 .new-comment {
     font-weight: bold;
-    color: #41bf53;
+    color: #CFA03F;
     padding-left: 5px;
+    cursor: pointer;
 }
 
 .role {
